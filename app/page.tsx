@@ -325,14 +325,14 @@ export default function HomePage() {
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:hello@motapo.com"
+              href="mailto:cliff@motapo.com"
               className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90"
             >
               <Mail className="mr-2 h-4 w-4" />
               Email Cliff
             </a>
             <a
-              href="https://www.linkedin.com/"
+              href="https://www.linkedin.com/in/cliffo/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center rounded-2xl border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
