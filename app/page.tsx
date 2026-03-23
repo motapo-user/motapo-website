@@ -14,69 +14,83 @@ const services = [
     icon: Building2,
     title: "Enterprise Transformation",
     description:
-      "Reshape delivery models, improve operating cadence, and align leaders, teams, and stakeholders around execution that actually moves the business.",
+      "Redesign operating models, improve execution, and align business and technology teams around measurable outcomes across complex delivery environments.",
   },
   {
     icon: Brain,
     title: "AI Delivery & Enablement",
     description:
-      "Turn AI ambition into practical business execution with governance, prioritization, adoption planning, and implementation support leaders can use.",
+      "Apply AI to delivery systems through workflow automation, decision support, adoption planning, and practical implementation that improves speed and productivity.",
   },
   {
     icon: Target,
-    title: "Strategic Execution",
+    title: "Portfolio Execution Improvement",
     description:
-      "Bridge strategy and delivery across complex initiatives so priorities are clear, decision-making is faster, and outcomes are easier to achieve.",
+      "Increase predictability, reduce bottlenecks, strengthen governance, and improve the execution of high-priority strategic initiatives.",
   },
 ];
 
 const differentiators = [
-  "Executive-ready communication that connects strategy to delivery",
-  "Enterprise experience across modernization, transformation, and cross-functional change",
-  "A practical AI lens grounded in adoption, governance, and real business value",
-  "Strong facilitation and stakeholder alignment in complex environments",
+  "15+ years leading enterprise transformation, delivery improvement, and operating model change",
+  "$500M+ cumulative digital investment portfolios supported across enterprise environments",
+  "Experience improving execution across complex portfolios, cross-functional teams, and high-visibility programs",
+  "Practical AI delivery perspective grounded in adoption, governance, workflow improvement, and measurable business value",
 ];
 
 const credibility = [
   {
     company: "IGM Financial",
-    text: "Enterprise modernization, stakeholder alignment, and delivery leadership in highly visible transformation environments.",
+    text: "Supported a $120M+ portfolio environment through operating model design, delivery optimization, and AI-enabled workflow transformation.",
   },
   {
-    company: "360insights",
-    text: "Scaled delivery improvement and helped leaders connect execution, team performance, and business priorities.",
+    company: "Scotiabank",
+    text: "Improved concept-to-cash speed and delivery efficiency across large-scale digital product and transformation initiatives.",
   },
   {
-    company: "Points",
-    text: "Supported fast-moving digital teams with stronger collaboration, delivery rhythm, and organizational change.",
+    company: "360insights / Points",
+    text: "Led delivery improvement, collaboration, and execution support across complex product and technology organizations.",
   },
 ];
 
-const engagements = [
-  "Transformation advisory for leaders navigating delivery friction and operating model change",
-  "AI strategy-to-execution support for organizations that need structure, readiness, and adoption plans",
-  "Workshop facilitation, alignment sessions, and executive-level problem solving",
-  "Fractional leadership support for strategic initiatives that need momentum and clarity",
+const impactPoints = [
+  "20–30% delivery efficiency improvement through AI-enabled workflow transformation",
+  "25% improvement in execution predictability across 300+ staff",
+  "$15M–$20M annual OpEx savings opportunity enabled through operating model design",
+  "$3M–$4M annual capacity creation through AI-driven workflow automation",
+  "$8M in engineering capacity reclaimed by removing QA and release bottlenecks",
+  "40% reduction in deployment lead times on a $60M modernization program",
+];
+
+const whoIHelp = [
+  "Enterprise leaders responsible for transformation, modernization, and strategic execution",
+  "Organizations improving operating models, delivery systems, and cross-functional alignment",
+  "Teams exploring how AI can improve execution, workflow efficiency, and decision-making",
+  "Programs where delivery friction, ambiguity, or stakeholder complexity is slowing progress",
 ];
 
 export default function HomePage() {
   return (
-    <main>
-      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/70 backdrop-blur">
+    <main className="min-h-screen bg-black text-white">
+      <header className="sticky top-0 z-50 border-b border-white/10 bg-black/80 backdrop-blur">
         <div className="section-shell flex h-16 items-center justify-between">
-          <a href="#" className="text-xl font-semibold tracking-tight">
-            Motapo
-          </a>
+          <div>
+            <div className="text-xl font-semibold tracking-tight">
+              Cliff Oliveira
+            </div>
+            <div className="hidden text-xs uppercase tracking-[0.2em] text-white/50 sm:block">
+              Motapo
+            </div>
+          </div>
 
           <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
             <a href="#services" className="hover:text-white">
               Services
             </a>
+            <a href="#impact" className="hover:text-white">
+              Impact
+            </a>
             <a href="#about" className="hover:text-white">
               About
-            </a>
-            <a href="#who-i-help" className="hover:text-white">
-              Who I Help
             </a>
             <a href="#contact" className="hover:text-white">
               Contact
@@ -90,19 +104,19 @@ export default function HomePage() {
         <div className="section-shell relative grid gap-14 py-20 lg:grid-cols-[1.15fr_0.85fr] lg:items-center lg:py-28">
           <div>
             <div className="mb-5 inline-flex items-center rounded-full border border-motapo-green/30 bg-motapo-green/10 px-4 py-2 text-sm text-white/90">
-              Motapo • Enterprise Transformation & AI Delivery
+              Enterprise Transformation & AI Delivery Advisor
             </div>
 
-            <h1 className="max-w-4xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
-              Helping leaders turn transformation and AI strategy into real
-              delivery momentum.
+            <h1 className="max-w-5xl text-4xl font-semibold leading-tight tracking-tight md:text-6xl">
+              Helping enterprise organizations improve execution through
+              operating model transformation and AI-enabled delivery systems.
             </h1>
 
-            <p className="mt-6 max-w-2xl text-lg leading-8 text-white/75 md:text-xl">
-              Motapo partners with organizations that need stronger execution
-              across enterprise transformation, product delivery, and practical
-              AI adoption — especially where the work is cross-functional,
-              politically complex, and high stakes.
+            <p className="mt-6 max-w-3xl text-lg leading-8 text-white/75 md:text-xl">
+              I work with leaders across complex enterprise environments to
+              improve delivery performance, redesign operating models, and
+              accelerate strategic initiatives through clearer execution, better
+              alignment, and practical AI adoption.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -110,21 +124,21 @@ export default function HomePage() {
                 href="#contact"
                 className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90"
               >
-                Book a strategy call
+                Book a conversation
               </a>
               <a
-                href="#services"
+                href="#impact"
                 className="inline-flex items-center rounded-2xl border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
               >
-                View services
+                View impact
               </a>
             </div>
 
             <div className="mt-10 grid gap-4 sm:grid-cols-3">
               {[
-                ["Enterprise Focus", "Modernization, delivery, operating model"],
-                ["AI Lens", "Practical adoption, governance, execution"],
-                ["Executive Presence", "Clear, credible, outcome-oriented"],
+                ["15+ Years", "Enterprise transformation and delivery improvement"],
+                ["$500M+", "Cumulative digital portfolios supported"],
+                ["100+ Practitioners", "Large-scale delivery environments influenced"],
               ].map(([title, text]) => (
                 <div key={title} className="card p-4">
                   <div className="text-sm font-medium text-white">{title}</div>
@@ -139,15 +153,15 @@ export default function HomePage() {
           <div className="card p-6 md:p-8">
             <div className="rounded-2xl border border-motapo-gold/20 bg-motapo-gold/10 p-5">
               <div className="text-sm uppercase tracking-[0.18em] text-motapo-gold">
-                Positioning
+                Where I Add Value
               </div>
               <div className="mt-2 text-2xl font-semibold">
-                Not just agile coaching.
+                Senior advisory support for complex, high-stakes work.
               </div>
               <p className="mt-3 text-sm leading-7 text-white/80">
-                Motapo should feel like a premium advisory brand for
-                transformation, AI delivery, and enterprise execution — not a
-                generic coaching site.
+                Best suited for organizations navigating transformation,
+                delivery friction, portfolio complexity, or AI adoption efforts
+                that need practical execution support.
               </p>
             </div>
 
@@ -167,15 +181,15 @@ export default function HomePage() {
       </section>
 
       <section id="services" className="section-shell py-20">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <div className="eyebrow">Services</div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            What Motapo should be known for
+            Advisory support for transformation, AI delivery, and portfolio execution
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/70">
-            The site should speak to senior leaders who need clarity, execution,
-            and strategic traction — not just teams looking for ceremonies or
-            coaching basics.
+            I help organizations improve execution across strategic initiatives
+            where progress depends on stronger alignment, better delivery
+            systems, and clearer decision-making.
           </p>
         </div>
 
@@ -197,24 +211,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="who-i-help" className="border-y border-white/10 bg-white/[0.03]">
-        <div className="section-shell grid gap-10 py-20 lg:grid-cols-[0.9fr_1.1fr]">
+      <section
+        id="impact"
+        className="border-y border-white/10 bg-white/[0.03]"
+      >
+        <div className="section-shell grid gap-10 py-20 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <div className="eyebrow">Why clients hire you</div>
+            <div className="eyebrow">Selected Impact</div>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              You operate well where the work is messy.
+              Measurable results across enterprise transformation and delivery improvement
             </h2>
             <p className="mt-5 text-lg leading-8 text-white/70">
-              Your resume and LinkedIn point to a stronger story than the
-              current site tells: executive alignment, transformation
-              leadership, AI-fluent delivery, and the ability to create forward
-              motion in ambiguous enterprise environments.
+              My work has focused on improving execution performance, unlocking
+              capacity, reducing bottlenecks, and increasing return on large
+              digital and transformation investments.
             </p>
           </div>
 
           <div className="grid gap-4">
-            {engagements.map((item) => (
-              <div key={item} className="rounded-2xl border border-white/10 bg-black/40 p-5">
+            {impactPoints.map((item) => (
+              <div
+                key={item}
+                className="rounded-2xl border border-white/10 bg-black/40 p-5"
+              >
                 <div className="flex items-start gap-3">
                   <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-motapo-gold" />
                   <p className="text-sm leading-7 text-white/85">{item}</p>
@@ -225,16 +244,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="about" className="section-shell py-20">
-        <div className="max-w-3xl">
-          <div className="eyebrow">Credibility</div>
+      <section className="section-shell py-20">
+        <div className="max-w-4xl">
+          <div className="eyebrow">Who I Work With</div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Grounded in enterprise experience
+            Support for leaders navigating transformation, execution, and change
           </h2>
           <p className="mt-5 text-lg leading-8 text-white/70">
-            Instead of a generic “about us,” the site should establish trust
-            quickly with recognizable enterprise context and a concise founder
-            story.
+            Especially relevant for enterprise environments where initiatives
+            are important, visible, and difficult to move forward.
+          </p>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-2">
+          {whoIHelp.map((item) => (
+            <div key={item} className="card p-6">
+              <p className="text-sm leading-7 text-white/80">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section id="about" className="section-shell py-20">
+        <div className="max-w-4xl">
+          <div className="eyebrow">Experience</div>
+          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+            Enterprise experience in transformation, delivery, and operating model improvement
+          </h2>
+          <p className="mt-5 text-lg leading-8 text-white/70">
+            Experience spans financial services, pensions, payments, digital
+            product organizations, and large-scale portfolio environments where
+            execution, governance, and business alignment directly affect
+            outcomes.
           </p>
         </div>
 
@@ -250,13 +291,17 @@ export default function HomePage() {
         </div>
 
         <div className="mt-12 card p-8">
-          <div className="eyebrow">Founder</div>
-          <h3 className="mt-3 text-3xl font-semibold">Cliff Oliveira</h3>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-white/75">
-            Enterprise transformation advisor focused on strategic execution,
-            AI delivery, and cross-functional alignment. Experienced in helping
-            leaders and teams navigate complexity, accelerate outcomes, and
-            create delivery systems that support real business change.
+          <div className="eyebrow">About Cliff Oliveira</div>
+          <h3 className="mt-3 text-3xl font-semibold">
+            Enterprise Transformation & AI Delivery Advisor
+          </h3>
+          <p className="mt-5 max-w-4xl text-lg leading-8 text-white/75">
+            I help organizations improve execution across complex strategic
+            initiatives through operating model redesign, delivery system
+            improvement, AI-enabled workflow transformation, and stronger
+            cross-functional alignment. My focus is on creating measurable
+            business outcomes in environments where complexity, scale, and
+            stakeholder dynamics make progress difficult.
           </p>
         </div>
       </section>
@@ -269,25 +314,25 @@ export default function HomePage() {
           <div>
             <div className="eyebrow">Contact</div>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              Let’s talk about what needs to move.
+              Let’s talk about the work that needs to move.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-white/75">
-              Whether you’re navigating enterprise transformation, evaluating AI
-              initiatives, or trying to unblock strategic delivery, Motapo can
-              help create clarity and momentum.
+              Whether you are improving a delivery model, leading a
+              transformation effort, or exploring how AI can accelerate
+              execution, I’d be glad to connect.
             </p>
           </div>
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:cliff@motapo.com"
+              href="mailto:hello@motapo.com"
               className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-black transition hover:opacity-90"
             >
               <Mail className="mr-2 h-4 w-4" />
-              Email Motapo
+              Email Cliff
             </a>
             <a
-              href="https://www.linkedin.com/in/cliffo/"
+              href="https://www.linkedin.com/"
               target="_blank"
               rel="noreferrer"
               className="inline-flex items-center rounded-2xl border border-white/15 px-6 py-3 font-medium text-white transition hover:bg-white/5"
