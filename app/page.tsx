@@ -68,23 +68,36 @@ const whoIHelp = [
   "Programs where delivery friction, ambiguity, or stakeholder complexity is slowing progress",
 ];
 
+function MotapoMark() {
+  return (
+    <div className="flex items-center gap-3">
+      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
+        <div className="text-lg font-semibold tracking-[-0.08em] text-amber-300">
+          M
+        </div>
+      </div>
+      <div>
+        <div className="text-xl font-semibold tracking-tight text-white">
+          Cliff Oliveira
+        </div>
+        <div className="mt-0.5 text-[11px] uppercase tracking-[0.28em] text-white/45">
+          Motapo
+        </div>
+      </div>
+    </div>
+  );
+}
+
 export default function HomePage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(234,179,8,0.10),transparent_25%)]" />
-        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.06)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.06)_1px,transparent_1px)] [background-size:44px_44px]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(234,179,8,0.10),transparent_24%)]" />
+        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:44px_44px]" />
 
-        <header className="relative border-b border-white/10">
+        <header className="relative border-b border-white/10 bg-neutral-950/70 backdrop-blur">
           <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-            <div>
-              <div className="text-2xl font-semibold tracking-tight">
-                Cliff Oliveira
-              </div>
-              <div className="mt-1 text-sm uppercase tracking-[0.22em] text-white/55">
-                Motapo
-              </div>
-            </div>
+            <MotapoMark />
 
             <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
               <a href="#services" className="transition hover:text-white">
@@ -110,13 +123,15 @@ export default function HomePage() {
             </div>
 
             <h1 className="max-w-5xl text-4xl font-semibold tracking-tight md:text-6xl">
-              Helping enterprise organizations improve execution and accelerate strategic change.
+              Helping enterprise organizations improve execution and accelerate
+              strategic change.
             </h1>
 
             <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
-              I work with leaders across complex enterprise environments to improve delivery performance,
-              redesign operating models, and apply AI in practical ways that increase speed, alignment,
-              and business value.
+              I work with leaders across complex enterprise environments to
+              improve delivery performance, redesign operating models, and apply
+              AI in practical ways that increase speed, alignment, and business
+              value.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -163,8 +178,9 @@ export default function HomePage() {
                   Senior advisory support for complex, high-stakes work.
                 </div>
                 <p className="mt-3 text-sm leading-7 text-neutral-200">
-                  Best suited for organizations navigating transformation, portfolio complexity,
-                  delivery friction, or AI adoption efforts that need practical execution support.
+                  Best suited for organizations navigating transformation,
+                  portfolio complexity, delivery friction, or AI adoption
+                  efforts that need practical execution support.
                 </p>
               </div>
 
@@ -193,8 +209,9 @@ export default function HomePage() {
             Advisory support for transformation, AI delivery, and portfolio execution
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
-            I help organizations improve execution across strategic initiatives where progress
-            depends on stronger alignment, better delivery systems, and clearer decision-making.
+            I help organizations improve execution across strategic initiatives
+            where progress depends on stronger alignment, better delivery
+            systems, and clearer decision-making.
           </p>
         </div>
 
@@ -231,8 +248,9 @@ export default function HomePage() {
               Measurable results across enterprise transformation and delivery improvement
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-              My work has focused on improving execution performance, unlocking capacity,
-              reducing bottlenecks, and increasing return on large digital and transformation investments.
+              My work has focused on improving execution performance, unlocking
+              capacity, reducing bottlenecks, and increasing return on large
+              digital and transformation investments.
             </p>
           </div>
 
@@ -261,8 +279,8 @@ export default function HomePage() {
             Support for leaders navigating transformation, execution, and change
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
-            Especially relevant for enterprise environments where initiatives are important,
-            visible, and difficult to move forward.
+            Especially relevant for enterprise environments where initiatives
+            are important, visible, and difficult to move forward.
           </p>
         </div>
 
@@ -289,8 +307,9 @@ export default function HomePage() {
             Enterprise experience in transformation, delivery, and operating model improvement
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
-            Experience spans financial services, pensions, payments, digital product organizations,
-            and large-scale portfolio environments where execution, governance, and business alignment directly affect outcomes.
+            Experience spans financial services, pensions, payments, digital
+            product organizations, and large-scale portfolio environments where
+            execution, governance, and business alignment directly affect outcomes.
           </p>
         </div>
 
@@ -302,7 +321,9 @@ export default function HomePage() {
             >
               <div className="p-6">
                 <div className="text-lg font-semibold">{item.company}</div>
-                <p className="mt-3 text-sm leading-7 text-neutral-300">{item.text}</p>
+                <p className="mt-3 text-sm leading-7 text-neutral-300">
+                  {item.text}
+                </p>
               </div>
             </div>
           ))}
@@ -317,10 +338,12 @@ export default function HomePage() {
               Enterprise Transformation & AI Delivery Advisor
             </h3>
             <p className="mt-5 max-w-4xl text-lg leading-8 text-neutral-200">
-              I help organizations improve execution across complex strategic initiatives through
-              operating model redesign, delivery system improvement, AI-enabled workflow transformation,
-              and stronger cross-functional alignment. My focus is on creating measurable business outcomes
-              in environments where complexity, scale, and stakeholder dynamics make progress difficult.
+              I help organizations improve execution across complex strategic
+              initiatives through operating model redesign, delivery system
+              improvement, AI-enabled workflow transformation, and stronger
+              cross-functional alignment. My focus is on creating measurable
+              business outcomes in environments where complexity, scale, and
+              stakeholder dynamics make progress difficult.
             </p>
           </div>
         </div>
@@ -339,8 +362,9 @@ export default function HomePage() {
               Let’s talk about the work that needs to move.
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-200">
-              Whether you are improving a delivery model, leading a transformation effort,
-              or exploring how AI can accelerate execution, I’d be glad to connect.
+              Whether you are improving a delivery model, leading a
+              transformation effort, or exploring how AI can accelerate
+              execution, I’d be glad to connect.
             </p>
           </div>
 
