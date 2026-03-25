@@ -1,3 +1,4 @@
+import Image from "next/image";
 import {
   ArrowRight,
   Brain,
@@ -71,10 +72,15 @@ const whoIHelp = [
 function MotapoMark() {
   return (
     <div className="flex items-center gap-3">
-      <div className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
-        <div className="text-lg font-semibold tracking-[-0.08em] text-amber-300">
-          M
-        </div>
+      <div className="flex h-12 w-12 items-center justify-center overflow-hidden rounded-xl border border-white/10 bg-white/[0.04]">
+        <Image
+          src="/motapo-logo.png"
+          alt="Motapo logo"
+          width={48}
+          height={48}
+          className="h-full w-full object-cover"
+          priority
+        />
       </div>
       <div>
         <div className="text-xl font-semibold tracking-tight text-white">
@@ -92,7 +98,7 @@ export default function HomePage() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
       <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(34,197,94,0.08),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(234,179,8,0.10),transparent_24%)]" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_24%)]" />
         <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:44px_44px]" />
 
         <header className="relative border-b border-white/10 bg-neutral-950/70 backdrop-blur">
@@ -118,7 +124,7 @@ export default function HomePage() {
 
         <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-24">
           <div>
-            <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-amber-300 opacity-90">
+            <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
               Enterprise Transformation & AI Delivery Advisor
             </div>
 
@@ -170,8 +176,8 @@ export default function HomePage() {
 
           <div className="rounded-[28px] border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
             <div className="p-6 md:p-8">
-              <div className="rounded-2xl border border-amber-300/20 bg-amber-300/10 p-5">
-                <div className="text-sm uppercase tracking-[0.18em] text-amber-300">
+              <div className="rounded-2xl border border-[#1CE0D6]/20 bg-[#1CE0D6]/10 p-5">
+                <div className="text-sm uppercase tracking-[0.18em] text-[#1CE0D6]">
                   Where I Add Value
                 </div>
                 <div className="mt-2 text-2xl font-semibold text-white">
@@ -190,7 +196,7 @@ export default function HomePage() {
                     key={item}
                     className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
                   >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
                     <p className="text-sm leading-6 text-neutral-200">{item}</p>
                   </div>
                 ))}
@@ -202,7 +208,7 @@ export default function HomePage() {
 
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Services
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
@@ -225,7 +231,7 @@ export default function HomePage() {
               >
                 <div className="p-6">
                   <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-                    <Icon className="h-6 w-6" />
+                    <Icon className="h-6 w-6 text-[#1CE0D6]" />
                   </div>
                   <h3 className="mt-5 text-xl font-semibold">{service.title}</h3>
                   <p className="mt-3 text-sm leading-7 text-neutral-300">
@@ -241,7 +247,7 @@ export default function HomePage() {
       <section id="impact" className="border-y border-white/10 bg-white/[0.03]">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[0.95fr_1.05fr]">
           <div>
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
               Selected Impact
             </div>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
@@ -261,7 +267,7 @@ export default function HomePage() {
                 className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5"
               >
                 <div className="flex items-start gap-3">
-                  <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-amber-300" />
+                  <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
                   <p className="text-sm leading-7 text-neutral-200">{item}</p>
                 </div>
               </div>
@@ -272,7 +278,7 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Who I Work With
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
@@ -300,7 +306,7 @@ export default function HomePage() {
 
       <section id="about" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Experience
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
@@ -331,7 +337,7 @@ export default function HomePage() {
 
         <div className="mt-12 rounded-[26px] border border-white/10 bg-white/[0.04]">
           <div className="p-8">
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
               About Cliff Oliveira
             </div>
             <h3 className="mt-3 text-3xl font-semibold md:text-4xl">
@@ -351,11 +357,11 @@ export default function HomePage() {
 
       <section
         id="contact"
-        className="border-t border-white/10 bg-gradient-to-br from-emerald-400/10 via-transparent to-amber-300/10"
+        className="border-t border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.08),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_22%)]"
       >
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-amber-300">
+            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
               Contact
             </div>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
