@@ -7,6 +7,7 @@ import {
   CheckCircle2,
   Linkedin,
   Mail,
+  MapPin,
   Target,
 } from "lucide-react";
 
@@ -31,13 +32,6 @@ const services = [
   },
 ];
 
-const differentiators = [
-  "15+ years leading enterprise transformation, delivery improvement, and operating model change",
-  "$500M+ cumulative digital investment portfolios supported across enterprise environments",
-  "Experience improving execution across complex portfolios, cross-functional teams, and high-visibility programs",
-  "Practical AI delivery perspective grounded in adoption, governance, workflow improvement, and measurable business value",
-];
-
 const impactPoints = [
   "20–30% delivery efficiency improvement through AI-enabled workflow transformation",
   "25% improvement in execution predictability across 300+ staff",
@@ -53,6 +47,18 @@ const credibility = [
     text: "Supported a $120M+ portfolio environment through operating model design, delivery optimization, and AI-enabled workflow transformation.",
   },
   {
+    company: "Interac",
+    text: "Led delivery governance and execution improvement across high-visibility payment infrastructure and digital transformation programs.",
+  },
+  {
+    company: "Ontario Teachers' Pension Plan",
+    text: "Drove operating model and portfolio execution improvements within a complex institutional investment environment.",
+  },
+  {
+    company: "BMO",
+    text: "Supported large-scale delivery programs within a major Canadian financial institution, improving execution alignment and portfolio visibility.",
+  },
+  {
     company: "Scotiabank",
     text: "Improved concept-to-cash speed and delivery efficiency across large-scale digital product and transformation initiatives.",
   },
@@ -62,11 +68,31 @@ const credibility = [
   },
 ];
 
+const clientNames = [
+  "IGM Financial",
+  "Interac",
+  "Ontario Teachers'",
+  "BMO",
+  "Scotiabank",
+  "ecobee",
+  "360insights",
+  "AudienceView",
+];
+
 const whoIHelp = [
   "Enterprise leaders responsible for transformation, modernization, and strategic execution",
   "Organizations improving operating models, delivery systems, and cross-functional alignment",
   "Teams exploring how AI can improve execution, workflow efficiency, and decision-making",
   "Programs where delivery friction, ambiguity, or stakeholder complexity is slowing progress",
+];
+
+const differentiators = [
+  "15+ years leading enterprise transformation and delivery improvement",
+  "$500M+ cumulative digital investment portfolios supported",
+  "Software development background — built systems before advising on them",
+  "Practical AI delivery experience: agentic workflows, AI-assisted SDLC, intelligent automation",
+  "Government of Canada Secret Clearance (Level II)",
+  "Execution-focused operator — outcomes over decks",
 ];
 
 function MotapoMark() {
@@ -94,125 +120,139 @@ function MotapoMark() {
   );
 }
 
-export default function HomePage() {
+export default function Home() {
   return (
     <main className="min-h-screen bg-neutral-950 text-white">
-      <section className="relative overflow-hidden border-b border-white/10">
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.10),transparent_28%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_24%)]" />
-        <div className="absolute inset-0 opacity-20 [background-image:linear-gradient(to_right,rgba(255,255,255,0.05)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.05)_1px,transparent_1px)] [background-size:44px_44px]" />
-
-        <header className="relative border-b border-white/10 bg-neutral-950/70 backdrop-blur">
-          <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
-            <MotapoMark />
-
-            <nav className="hidden items-center gap-8 text-sm text-white/80 md:flex">
-              <a href="#services" className="transition hover:text-white">
-                Services
-              </a>
-              <a href="#impact" className="transition hover:text-white">
-                Impact
-              </a>
-              <a href="#about" className="transition hover:text-white">
-                About
-              </a>
-              <a href="#contact" className="transition hover:text-white">
-                Contact
-              </a>
-            </nav>
-          </div>
-        </header>
-
-        <div className="relative mx-auto grid max-w-7xl gap-12 px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-24">
-          <div>
-            <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
-              Enterprise Transformation & AI Delivery Advisor
-            </div>
-
-            <h1 className="max-w-5xl text-4xl font-semibold tracking-tight md:text-6xl">
-              Helping enterprise organizations improve execution and accelerate
-              strategic change.
-            </h1>
-
-            <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
-              I work with leaders across complex enterprise environments to
-              improve delivery performance, redesign operating models, and apply
-              AI in practical ways that increase speed, alignment, and business
-              value.
-            </p>
-
-            <div className="mt-8 flex flex-wrap gap-4">
+      {/* ── NAV ── */}
+      <header className="sticky top-0 z-50 border-b border-white/[0.06] bg-neutral-950/90 backdrop-blur-md">
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 md:px-10">
+          <MotapoMark />
+          <nav className="hidden items-center gap-8 md:flex">
+            {["Services", "Impact", "About", "Contact"].map((item) => (
               <a
-                href="#contact"
-                className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
+                key={item}
+                href={`#${item.toLowerCase()}`}
+                className="text-sm text-white/60 transition hover:text-white"
               >
-                Book a conversation
+                {item}
               </a>
-              <a
-                href="#impact"
-                className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-3 font-medium text-white transition hover:bg-white/5"
-              >
-                View impact
-              </a>
-            </div>
+            ))}
+          </nav>
+        </div>
+      </header>
 
-            <div className="mt-10 grid gap-4 sm:grid-cols-3">
-              {[
-                ["15+ Years", "Enterprise transformation and delivery improvement"],
-                ["$500M+", "Cumulative digital portfolios supported"],
-                ["100+ Practitioners", "Large-scale delivery environments influenced"],
-              ].map(([title, text]) => (
-                <div
-                  key={title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-4 backdrop-blur"
-                >
-                  <div className="text-sm font-medium text-white">{title}</div>
-                  <div className="mt-1 text-sm leading-6 text-neutral-400">
-                    {text}
-                  </div>
-                </div>
-              ))}
-            </div>
+      {/* ── HERO ── */}
+      <section className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-24">
+        <div>
+          <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
+            Enterprise Transformation & AI Delivery Advisor
           </div>
 
-          <div className="rounded-[28px] border border-white/10 bg-white/5 shadow-2xl backdrop-blur">
-            <div className="p-6 md:p-8">
-              <div className="rounded-2xl border border-[#1CE0D6]/20 bg-[#1CE0D6]/10 p-5">
-                <div className="text-sm uppercase tracking-[0.18em] text-[#1CE0D6]">
-                  Where I Add Value
-                </div>
-                <div className="mt-2 text-2xl font-semibold text-white">
-                  Senior advisory support for complex, high-stakes work.
-                </div>
-                <p className="mt-3 text-sm leading-7 text-neutral-200">
-                  Best suited for organizations navigating transformation,
-                  portfolio complexity, delivery friction, or AI adoption
-                  efforts that need practical execution support.
-                </p>
-              </div>
+          <h1 className="max-w-5xl text-4xl font-semibold tracking-tight md:text-6xl">
+            Helping enterprise organizations improve execution and accelerate
+            strategic change.
+          </h1>
 
-              <div className="mt-5 grid gap-4">
-                {differentiators.map((item) => (
-                  <div
-                    key={item}
-                    className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
-                    <p className="text-sm leading-6 text-neutral-200">{item}</p>
-                  </div>
-                ))}
+          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
+            I work with leaders across complex enterprise environments to
+            improve delivery performance, redesign operating models, and apply
+            AI in practical ways that increase speed, alignment, and business
+            value.
+          </p>
+
+          <div className="mt-8 flex flex-wrap gap-4">
+            <a
+              href="#contact"
+              className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
+            >
+              Book a conversation
+            </a>
+            <a
+              href="#impact"
+              className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-3 font-medium text-white transition hover:bg-white/5"
+            >
+              View impact
+            </a>
+          </div>
+
+          {/* Stat callouts */}
+          <div className="mt-10 grid gap-4 sm:grid-cols-3">
+            {[
+              ["15+ Years", "Enterprise transformation and delivery improvement"],
+              ["$500M+", "Cumulative digital portfolios supported"],
+              ["100+ Practitioners", "Large-scale delivery environments influenced"],
+            ].map(([stat, label]) => (
+              <div
+                key={stat}
+                className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+              >
+                <div className="text-2xl font-semibold text-[#1CE0D6]">
+                  {stat}
+                </div>
+                <div className="mt-1 text-sm text-neutral-400">{label}</div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
+      {/* ── CLIENT NAME STRIP ── */}
+      <section className="border-y border-white/[0.06] bg-white/[0.02] px-6 py-6 md:px-10">
+        <div className="mx-auto max-w-7xl">
+          <p className="mb-4 text-xs font-medium uppercase tracking-[0.2em] text-white/35">
+            Organizations I&apos;ve worked with
+          </p>
+          <div className="flex flex-wrap gap-x-8 gap-y-3">
+            {clientNames.map((name) => (
+              <span
+                key={name}
+                className="text-sm font-medium text-white/50 transition hover:text-white/80"
+              >
+                {name}
+              </span>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── WHERE I ADD VALUE ── */}
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <div className="max-w-4xl">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
+            Where I Add Value
+          </div>
+          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+            Senior advisory support for complex, high-stakes work.
+          </h2>
+          <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
+            Best suited for organizations navigating transformation, portfolio
+            complexity, delivery friction, or AI adoption efforts that need
+            practical execution support.
+          </p>
+        </div>
+
+        <div className="mt-5 grid gap-4">
+          {differentiators.map((item) => (
+            <div
+              key={item}
+              className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
+            >
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
+              <p className="text-sm leading-6 text-neutral-200">{item}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* ── SERVICES ── */}
       <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Services
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Advisory support for transformation, AI delivery, and portfolio execution
+            Advisory support for transformation, AI delivery, and portfolio
+            execution
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
             I help organizations improve execution across strategic initiatives
@@ -227,55 +267,52 @@ export default function HomePage() {
             return (
               <div
                 key={service.title}
-                className="rounded-[26px] border border-white/10 bg-white/[0.04]"
+                className="rounded-2xl border border-white/10 bg-white/[0.03] p-6"
               >
-                <div className="p-6">
-                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/5">
-                    <Icon className="h-6 w-6 text-[#1CE0D6]" />
-                  </div>
-                  <h3 className="mt-5 text-xl font-semibold">{service.title}</h3>
-                  <p className="mt-3 text-sm leading-7 text-neutral-300">
-                    {service.description}
-                  </p>
-                </div>
+                <Icon className="h-8 w-8 text-[#1CE0D6]" />
+                <h3 className="mt-4 text-xl font-semibold">{service.title}</h3>
+                <p className="mt-3 text-sm leading-7 text-neutral-300">
+                  {service.description}
+                </p>
               </div>
             );
           })}
         </div>
       </section>
 
-      <section id="impact" className="border-y border-white/10 bg-white/[0.03]">
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[0.95fr_1.05fr]">
-          <div>
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
-              Selected Impact
-            </div>
-            <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              Measurable results across enterprise transformation and delivery improvement
-            </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
-              My work has focused on improving execution performance, unlocking
-              capacity, reducing bottlenecks, and increasing return on large
-              digital and transformation investments.
-            </p>
+      {/* ── IMPACT ── */}
+      <section id="impact" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <div className="max-w-4xl">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
+            Selected Impact
           </div>
+          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+            Measurable results across enterprise transformation and delivery
+            improvement
+          </h2>
+          <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-300">
+            My work has focused on improving execution performance, unlocking
+            capacity, reducing bottlenecks, and increasing return on large
+            digital and transformation investments.
+          </p>
+        </div>
 
-          <div className="grid gap-4">
-            {impactPoints.map((item) => (
-              <div
-                key={item}
-                className="rounded-2xl border border-white/10 bg-neutral-950/70 p-5"
-              >
-                <div className="flex items-start gap-3">
-                  <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
-                  <p className="text-sm leading-7 text-neutral-200">{item}</p>
-                </div>
+        <div className="mt-10 grid gap-4">
+          {impactPoints.map((item) => (
+            <div
+              key={item}
+              className="rounded-2xl border border-white/10 bg-neutral-900/70 p-5"
+            >
+              <div className="flex items-start gap-3">
+                <Briefcase className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
+                <p className="text-sm leading-7 text-neutral-200">{item}</p>
               </div>
-            ))}
-          </div>
+            </div>
+          ))}
         </div>
       </section>
 
+      {/* ── WHO I WORK WITH ── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
@@ -294,28 +331,30 @@ export default function HomePage() {
           {whoIHelp.map((item) => (
             <div
               key={item}
-              className="rounded-[26px] border border-white/10 bg-white/[0.04]"
+              className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
             >
-              <div className="p-6">
-                <p className="text-sm leading-7 text-neutral-300">{item}</p>
-              </div>
+              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
+              <p className="text-sm leading-6 text-neutral-200">{item}</p>
             </div>
           ))}
         </div>
       </section>
 
-      <section id="about" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      {/* ── EXPERIENCE ── */}
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Experience
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Enterprise experience in transformation, delivery, and operating model improvement
+            Enterprise experience in transformation, delivery, and operating
+            model improvement
           </h2>
           <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
             Experience spans financial services, pensions, payments, digital
             product organizations, and large-scale portfolio environments where
-            execution, governance, and business alignment directly affect outcomes.
+            execution, governance, and business alignment directly affect
+            outcomes.
           </p>
         </div>
 
@@ -334,8 +373,11 @@ export default function HomePage() {
             </div>
           ))}
         </div>
+      </section>
 
-        <div className="mt-12 rounded-[26px] border border-white/10 bg-white/[0.04]">
+      {/* ── ABOUT ── */}
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+        <div className="rounded-[26px] border border-white/10 bg-white/[0.04]">
           <div className="p-8">
             <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
               About Cliff Oliveira
@@ -347,17 +389,30 @@ export default function HomePage() {
               I help organizations improve execution across complex strategic
               initiatives through operating model redesign, delivery system
               improvement, AI-enabled workflow transformation, and stronger
-              cross-functional alignment. My focus is on creating measurable
-              business outcomes in environments where complexity, scale, and
-              stakeholder dynamics make progress difficult.
+              cross-functional alignment.
+            </p>
+            <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+              My background starts in software development — I built systems
+              before advising on them, which shapes how I engage with
+              engineering and product teams. Over 15+ years I&apos;ve moved
+              into transformation and delivery leadership across financial
+              services, pensions, payments, and digital product organizations,
+              consistently focused on outcomes over process theatre.
+            </p>
+            <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+              I hold a Government of Canada Secret Clearance (Level II) and
+              operate through Motapo, an independent advisory practice based
+              in Oakville, ON, serving enterprise organizations across Canada
+              and the United States.
             </p>
           </div>
         </div>
       </section>
 
+      {/* ── CONTACT ── */}
       <section
         id="contact"
-        className="border-t border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.08),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_22%)]"
+        className="border-t border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.08),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_25%)]"
       >
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
@@ -365,12 +420,12 @@ export default function HomePage() {
               Contact
             </div>
             <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-              Let’s talk about the work that needs to move.
+              Let&apos;s talk about the work that needs to move.
             </h2>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-200">
+            <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
               Whether you are improving a delivery model, leading a
               transformation effort, or exploring how AI can accelerate
-              execution, I’d be glad to connect.
+              execution, I&apos;d be glad to connect.
             </p>
           </div>
 
@@ -395,9 +450,14 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* ── FOOTER ── */}
       <footer className="border-t border-white/10">
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-white/55 md:flex-row md:items-center md:justify-between md:px-10">
           <p>© {new Date().getFullYear()} Motapo. All rights reserved.</p>
+          <div className="flex items-center gap-1.5 text-white/40">
+            <MapPin className="h-3.5 w-3.5" />
+            <span>Oakville, ON · Serving enterprise organizations across Canada and the U.S.</span>
+          </div>
           <a
             href="#"
             className="inline-flex items-center text-white/70 transition hover:text-white"
