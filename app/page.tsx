@@ -134,54 +134,73 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative mx-auto max-w-7xl px-6 py-14 md:px-10 lg:py-20">
-        <div>
-          <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
-            Enterprise Transformation & AI Delivery Advisor
-          </div>
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
 
-          <h1 className="max-w-5xl text-4xl font-semibold tracking-tight md:text-6xl">
-            Helping enterprise organizations improve execution and accelerate
-            strategic change.
-          </h1>
+          {/* Left: text */}
+          <div className="flex-1">
+            <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
+              Enterprise Transformation & AI Delivery Advisor
+            </div>
 
-          <p className="mt-6 max-w-3xl text-lg leading-8 text-neutral-300 md:text-xl">
-            I work with leaders across complex enterprise environments to
-            improve delivery performance, redesign operating models, and apply
-            AI in practical ways that increase speed, alignment, and business
-            value.
-          </p>
+            <h1 className="text-4xl font-semibold tracking-tight md:text-6xl">
+              Helping enterprise organizations improve execution and accelerate
+              strategic change.
+            </h1>
 
-          <div className="mt-8 flex flex-wrap gap-4">
-            <a
-              href="#contact"
-              className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
-            >
-              Book a conversation
-            </a>
-            <a
-              href="#impact"
-              className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-3 font-medium text-white transition hover:bg-white/5"
-            >
-              View impact
-            </a>
-          </div>
+            <p className="mt-6 max-w-xl text-lg leading-8 text-neutral-300 md:text-xl">
+              I work with leaders across complex enterprise environments to
+              improve delivery performance, redesign operating models, and apply
+              AI in practical ways that increase speed, alignment, and business
+              value.
+            </p>
 
-          {/* Stat callouts */}
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            {[
-              ["15+ Years", "Enterprise transformation and delivery improvement"],
-              ["$500M+", "Cumulative digital portfolios supported"],
-              ["100+ Practitioners", "Large-scale delivery environments influenced"],
-            ].map(([stat, label]) => (
-              <div
-                key={stat}
-                className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+            <div className="mt-8 flex flex-wrap gap-4">
+              <a
+                href="#contact"
+                className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
               >
-                <div className="text-2xl font-semibold text-[#1CE0D6]">{stat}</div>
-                <div className="mt-1 text-sm text-neutral-400">{label}</div>
-              </div>
-            ))}
+                Book a conversation
+              </a>
+              <a
+                href="#impact"
+                className="inline-flex items-center rounded-2xl border border-white/20 bg-transparent px-6 py-3 font-medium text-white transition hover:bg-white/5"
+              >
+                View impact
+              </a>
+            </div>
+
+            {/* Stat callouts */}
+            <div className="mt-10 grid gap-4 sm:grid-cols-3">
+              {[
+                ["15+ Years", "Enterprise transformation and delivery improvement"],
+                ["$500M+", "Cumulative digital portfolios supported"],
+                ["100+ Practitioners", "Large-scale delivery environments influenced"],
+              ].map(([stat, label]) => (
+                <div
+                  key={stat}
+                  className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
+                >
+                  <div className="text-2xl font-semibold text-[#1CE0D6]">{stat}</div>
+                  <div className="mt-1 text-sm text-neutral-400">{label}</div>
+                </div>
+              ))}
+            </div>
           </div>
+
+          {/* Right: photo */}
+          <div className="hidden lg:block lg:w-[380px] xl:w-[420px] shrink-0">
+            <div className="relative overflow-hidden rounded-3xl">
+              <Image
+                src="/cliff-headshot.jpg"
+                alt="Cliff Oliveira"
+                width={420}
+                height={560}
+                className="w-full object-cover object-top"
+                priority
+              />
+            </div>
+          </div>
+
         </div>
       </section>
 
