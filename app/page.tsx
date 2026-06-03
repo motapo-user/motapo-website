@@ -133,7 +133,7 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className="relative mx-auto max-w-7xl px-6 pt-14 pb-6 md:px-10 lg:pt-20">
+      <section className="relative mx-auto max-w-7xl px-6 py-14 md:px-10 lg:py-20">
         <div>
           <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
             Enterprise Transformation & AI Delivery Advisor
@@ -202,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="services" className="mx-auto max-w-7xl px-6 pb-14 pt-8 md:px-10">
+      <section id="services" className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Services
