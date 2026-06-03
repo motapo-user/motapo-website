@@ -156,7 +156,9 @@ export default function Home() {
 
             <div className="mt-8 flex flex-wrap gap-4">
               <a
-                href="#contact"
+                href="https://calendly.com/motapo/conversation"
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
               >
                 Book a conversation
@@ -452,11 +454,13 @@ export default function Home() {
 
           <div className="flex flex-wrap gap-4">
             <a
-              href="mailto:cliff@motapo.com"
+              href="https://calendly.com/motapo/conversation"
+              target="_blank"
+              rel="noreferrer"
               className="inline-flex items-center rounded-2xl bg-white px-6 py-3 font-medium text-neutral-950 transition hover:bg-neutral-200"
             >
               <Mail className="mr-2 h-4 w-4" />
-              Email Cliff
+              Book a conversation
             </a>
             <a
               href="https://www.linkedin.com/in/cliffo/"
