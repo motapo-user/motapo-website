@@ -33,38 +33,38 @@ const services = [
 ];
 
 const impactPoints = [
-  "20–30% delivery efficiency improvement through AI-enabled workflow transformation",
-  "25% improvement in execution predictability across 300+ staff",
-  "$15M–$20M annual OpEx savings opportunity enabled through operating model design",
-  "$3M–$4M annual capacity creation through AI-driven workflow automation",
-  "$8M in engineering capacity reclaimed by removing QA and release bottlenecks",
-  "40% reduction in deployment lead times on a $60M modernization program",
+  "$120M+ digital portfolio operating model design — enabling $15M–$20M in annual OpEx savings",
+  "AI-driven workflow automation reclaiming 4+ hrs/week across 150+ staff — $3M–$4M annual capacity",
+  "$8M in engineering capacity reclaimed by eliminating QA and release bottlenecks at Interac",
+  "40% reduction in deployment lead times on a $60M infrastructure modernization at Ontario Teachers'",
+  "$25M+ annual capacity release across a $180M+ digital portfolio at BMO",
+  "25% acceleration in concept-to-cash cycles at Scotiabank, enabling $25M in early revenue",
 ];
 
 const credibility = [
   {
-    company: "IGM Financial",
-    text: "Supported a $120M+ portfolio environment through operating model design, delivery optimization, and AI-enabled workflow transformation.",
+    company: "IGM Financial / Mackenzie Investments",
+    text: "Operating model design and AI-enabled delivery transformation across a $120M+ digital portfolio.",
   },
   {
     company: "Interac",
-    text: "Led delivery governance and execution improvement across high-visibility payment infrastructure and digital transformation programs.",
+    text: "Delivery governance and Agile transformation across high-visibility payment infrastructure programs.",
   },
   {
     company: "Ontario Teachers' Pension Plan",
-    text: "Drove operating model and portfolio execution improvements within a complex institutional investment environment.",
+    text: "Operating model and portfolio execution improvement within a complex institutional investment environment.",
   },
   {
     company: "BMO",
-    text: "Supported large-scale delivery programs within a major Canadian financial institution, improving execution alignment and portfolio visibility.",
+    text: "Portfolio execution optimization across Personal & Business Banking — $180M+ digital investment.",
   },
   {
     company: "Scotiabank",
-    text: "Improved concept-to-cash speed and delivery efficiency across large-scale digital product and transformation initiatives.",
+    text: "Delivery efficiency improvement and concept-to-cash acceleration across Digital Factory.",
   },
   {
     company: "360insights / Points",
-    text: "Led delivery improvement, collaboration, and execution support across complex product and technology organizations.",
+    text: "Delivery improvement, collaboration, and execution support across complex product and technology organizations.",
   },
 ];
 
@@ -84,15 +84,6 @@ const whoIHelp = [
   "Organizations improving operating models, delivery systems, and cross-functional alignment",
   "Teams exploring how AI can improve execution, workflow efficiency, and decision-making",
   "Programs where delivery friction, ambiguity, or stakeholder complexity is slowing progress",
-];
-
-const differentiators = [
-  "15+ years leading enterprise transformation and delivery improvement",
-  "$500M+ cumulative digital investment portfolios supported",
-  "Software development background — built systems before advising on them",
-  "Practical AI delivery experience: agentic workflows, AI-assisted SDLC, intelligent automation",
-  "Government of Canada Secret Clearance (Level II)",
-  "Execution-focused operator — outcomes over decks",
 ];
 
 function MotapoMark() {
@@ -142,7 +133,7 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-start lg:py-24">
+      <section className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:py-24">
         <div>
           <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
             Enterprise Transformation & AI Delivery Advisor
@@ -186,9 +177,7 @@ export default function Home() {
                 key={stat}
                 className="rounded-2xl border border-white/10 bg-white/[0.04] p-4"
               >
-                <div className="text-2xl font-semibold text-[#1CE0D6]">
-                  {stat}
-                </div>
+                <div className="text-2xl font-semibold text-[#1CE0D6]">{stat}</div>
                 <div className="mt-1 text-sm text-neutral-400">{label}</div>
               </div>
             ))}
@@ -204,43 +193,11 @@ export default function Home() {
           </p>
           <div className="flex flex-wrap gap-x-8 gap-y-3">
             {clientNames.map((name) => (
-              <span
-                key={name}
-                className="text-sm font-medium text-white/50 transition hover:text-white/80"
-              >
+              <span key={name} className="text-sm font-medium text-white/50">
                 {name}
               </span>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── WHERE I ADD VALUE ── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="max-w-4xl">
-          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
-            Where I Add Value
-          </div>
-          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Senior advisory support for complex, high-stakes work.
-          </h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
-            Best suited for organizations navigating transformation, portfolio
-            complexity, delivery friction, or AI adoption efforts that need
-            practical execution support.
-          </p>
-        </div>
-
-        <div className="mt-5 grid gap-4">
-          {differentiators.map((item) => (
-            <div
-              key={item}
-              className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
-            >
-              <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
-              <p className="text-sm leading-6 text-neutral-200">{item}</p>
-            </div>
-          ))}
         </div>
       </section>
 
@@ -297,7 +254,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-4">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           {impactPoints.map((item) => (
             <div
               key={item}
@@ -327,11 +284,11 @@ export default function Home() {
           </p>
         </div>
 
-        <div className="mt-10 grid gap-6 md:grid-cols-2">
+        <div className="mt-10 grid gap-4 md:grid-cols-2">
           {whoIHelp.map((item) => (
             <div
               key={item}
-              className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-4"
+              className="flex items-start gap-3 rounded-2xl border border-white/10 bg-neutral-900/70 p-5"
             >
               <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0 text-[#1CE0D6]" />
               <p className="text-sm leading-6 text-neutral-200">{item}</p>
@@ -347,29 +304,21 @@ export default function Home() {
             Experience
           </div>
           <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
-            Enterprise experience in transformation, delivery, and operating
-            model improvement
+            Enterprise experience across financial services, pensions, and
+            payments
           </h2>
-          <p className="mt-5 max-w-3xl text-lg leading-8 text-neutral-300">
-            Experience spans financial services, pensions, payments, digital
-            product organizations, and large-scale portfolio environments where
-            execution, governance, and business alignment directly affect
-            outcomes.
-          </p>
         </div>
 
         <div className="mt-10 grid gap-6 md:grid-cols-3">
           {credibility.map((item) => (
             <div
               key={item.company}
-              className="rounded-[26px] border border-white/10 bg-white/[0.04]"
+              className="rounded-[26px] border border-white/10 bg-white/[0.04] p-6"
             >
-              <div className="p-6">
-                <div className="text-lg font-semibold">{item.company}</div>
-                <p className="mt-3 text-sm leading-7 text-neutral-300">
-                  {item.text}
-                </p>
-              </div>
+              <div className="text-lg font-semibold">{item.company}</div>
+              <p className="mt-3 text-sm leading-7 text-neutral-300">
+                {item.text}
+              </p>
             </div>
           ))}
         </div>
@@ -377,21 +326,23 @@ export default function Home() {
 
       {/* ── ABOUT ── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
-        <div className="rounded-[26px] border border-white/10 bg-white/[0.04]">
-          <div className="p-8">
-            <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
-              About Cliff Oliveira
-            </div>
-            <h3 className="mt-3 text-3xl font-semibold md:text-4xl">
-              Enterprise Transformation & AI Delivery Advisor
-            </h3>
-            <p className="mt-5 max-w-4xl text-lg leading-8 text-neutral-200">
+        <div className="rounded-[26px] border border-white/10 bg-white/[0.04] p-8">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
+            About Cliff Oliveira
+          </div>
+          <h3 className="mt-3 text-3xl font-semibold md:text-4xl">
+            Enterprise Transformation & AI Delivery Advisor
+          </h3>
+          <div className="mt-5 max-w-4xl space-y-4 text-lg leading-8 text-neutral-300">
+            <p>
               I help organizations improve execution across complex strategic
               initiatives through operating model redesign, delivery system
               improvement, AI-enabled workflow transformation, and stronger
-              cross-functional alignment.
+              cross-functional alignment. My focus is on creating measurable
+              business outcomes in environments where complexity, scale, and
+              stakeholder dynamics make progress difficult.
             </p>
-            <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+            <p>
               My background starts in software development — I built systems
               before advising on them, which shapes how I engage with
               engineering and product teams. Over 15+ years I&apos;ve moved
@@ -399,11 +350,11 @@ export default function Home() {
               services, pensions, payments, and digital product organizations,
               consistently focused on outcomes over process theatre.
             </p>
-            <p className="mt-4 max-w-4xl text-lg leading-8 text-neutral-300">
+            <p>
               I hold a Government of Canada Secret Clearance (Level II) and
-              operate through Motapo, an independent advisory practice based
-              in Oakville, ON, serving enterprise organizations across Canada
-              and the United States.
+              operate through Motapo, an independent advisory practice based in
+              Oakville, ON, serving enterprise organizations across Canada and
+              the United States.
             </p>
           </div>
         </div>
