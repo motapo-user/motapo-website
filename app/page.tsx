@@ -134,7 +134,7 @@ export default function Home() {
 
       {/* ── HERO ── */}
       <section className="relative mx-auto max-w-7xl px-6 py-14 md:px-10 lg:py-20">
-        <div className="flex flex-col gap-12 lg:flex-row lg:items-center lg:gap-16">
+        <div className="flex flex-col gap-12 lg:flex-row lg:items-start lg:gap-16">
 
           {/* Left: text */}
           <div className="flex-1">
