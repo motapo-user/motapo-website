@@ -133,7 +133,7 @@ export default function Home() {
       </header>
 
       {/* ── HERO ── */}
-      <section className="relative mx-auto max-w-7xl px-6 py-20 md:px-10 lg:py-24">
+      <section className="relative mx-auto max-w-7xl px-6 py-14 md:px-10 lg:py-20">
         <div>
           <div className="mb-5 text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6] opacity-90">
             Enterprise Transformation & AI Delivery Advisor
@@ -202,7 +202,7 @@ export default function Home() {
       </section>
 
       {/* ── SERVICES ── */}
-      <section id="services" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <section id="services" className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Services
@@ -238,7 +238,7 @@ export default function Home() {
       </section>
 
       {/* ── IMPACT ── */}
-      <section id="impact" className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <section id="impact" className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Selected Impact
@@ -270,7 +270,7 @@ export default function Home() {
       </section>
 
       {/* ── WHO I WORK WITH ── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Who I Work With
@@ -298,7 +298,7 @@ export default function Home() {
       </section>
 
       {/* ── EXPERIENCE ── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             Experience
@@ -325,7 +325,7 @@ export default function Home() {
       </section>
 
       {/* ── ABOUT ── */}
-      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="rounded-[26px] border border-white/10 bg-white/[0.04] p-8">
           <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
             About Cliff Oliveira
@@ -365,7 +365,7 @@ export default function Home() {
         id="contact"
         className="border-t border-white/10 bg-[radial-gradient(circle_at_top_left,rgba(28,224,214,0.08),transparent_25%),radial-gradient(circle_at_bottom_right,rgba(28,224,214,0.08),transparent_25%)]"
       >
-        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 md:px-10 lg:grid-cols-[1fr_auto] lg:items-center">
+        <div className="mx-auto grid max-w-7xl gap-10 px-6 py-14 md:px-10 lg:grid-cols-[1fr_auto] lg:items-center">
           <div>
             <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
               Contact
