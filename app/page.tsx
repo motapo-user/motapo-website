@@ -288,6 +288,57 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── TESTIMONIALS ── */}
+      <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
+        <div className="max-w-4xl">
+          <div className="text-sm font-medium uppercase tracking-[0.2em] text-[#1CE0D6]">
+            What People Say
+          </div>
+          <h2 className="mt-3 text-3xl font-semibold md:text-5xl">
+            Trusted by leaders across complex organizations
+          </h2>
+        </div>
+
+        <div className="mt-10 grid gap-6 md:grid-cols-3">
+          {[
+            {
+              quote:
+                "His contribution at the program level was less about process and more about environment. He helped create the conditions where experimentation was safe, where teams could engage with emerging AI capabilities without the usual organizational immune response kicking in.",
+              name: "Michael Hutson",
+              title: "AI & Agile Program Delivery Leader, GenAI Transformation",
+              company: "IGM Financial",
+            },
+            {
+              quote:
+                "Cliff operates with a level of ownership and business awareness that goes beyond traditional delivery roles, and his contributions made a meaningful difference in our ability to execute.",
+              name: "Ryan L. Mascarenhas",
+              title: "Principal Analyst",
+              company: "Goldwyn & Sons",
+            },
+            {
+              quote:
+                "Cliff operates with the same strategic vision required of the best senior product and executive leaders. He has a strong ability to quickly understand complex problems, identify the highest-leverage opportunities, and translate them into clear, actionable strategies.",
+              name: "Frank Caron",
+              title: "Fintech CPO, Product & Ops Leader",
+              company: "",
+            },
+          ].map((t) => (
+            <div
+              key={t.name}
+              className="flex flex-col justify-between rounded-[26px] border border-white/10 bg-white/[0.04] p-6"
+            >
+              <p className="text-sm leading-7 text-neutral-200">&ldquo;{t.quote}&rdquo;</p>
+              <div className="mt-6 border-t border-white/10 pt-4">
+                <div className="font-semibold text-white">{t.name}</div>
+                <div className="mt-0.5 text-xs text-neutral-400">
+                  {t.title}{t.company ? ` · ${t.company}` : ""}
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
       {/* ── WHO I WORK WITH ── */}
       <section className="mx-auto max-w-7xl px-6 py-14 md:px-10">
         <div className="max-w-4xl">
