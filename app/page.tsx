@@ -188,7 +188,7 @@ export default function Home() {
           </div>
 
           {/* Right: photo */}
-          <div className="hidden lg:block lg:w-[380px] xl:w-[420px] shrink-0">
+          <div className="w-full lg:w-[380px] xl:w-[420px] shrink-0">
             <div className="relative overflow-hidden rounded-3xl">
               <Image
                 src="/cliff-headshot.jpg"
